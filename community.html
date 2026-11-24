@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Community · RTB Development</title>
+<meta name="description" content="Site plan, lot sizes, pricing and availability.">
+<meta name="theme-color" content="#6e2230">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css?v=20261124k">
+</head>
+<body data-page="community">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"></header>
+<main id="main">
+
+<section class="page-head" style="background-image:url('images/aerial-lake-development.jpg')">
+  <div class="wrap">
+    <div class="crumbs"><a href="inventory.html">Current projects</a> / <span id="c-crumb"></span></div>
+    <div class="row">
+      <h1 id="c-name"></h1>
+      <p class="aside" id="c-summary"></p>
+    </div>
+    <div class="facts" id="c-facts"></div>
+  </div>
+</section>
+
+<section class="section" id="interest-section" style="padding-top:0" hidden>
+  <div class="wrap project-cta">
+    <div class="project-cta-media">
+      <div id="interest-photo"></div>
+      <div class="cta-features" id="features-section">
+        <h3>Features</h3>
+        <ul class="plain-list" id="c-features"></ul>
+        <div id="c-plat"></div>
+      </div>
+    </div>
+    <div class="project-cta-body">
+      <p class="kicker" id="interest-kicker"></p>
+      <h2 id="interest-title"></h2>
+      <dl class="detail-list overview-details" id="ov-details" hidden></dl>
+      <p class="lede" id="interest-text"></p>
+      <a class="btn" id="interest-btn" href="contact.html">Ask about this project</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="where-section" style="padding-top:0" hidden>
+  <div class="wrap where">
+    <div class="where-map" id="c-map" role="img"></div>
+    <div class="where-body">
+      <p class="kicker">Location</p>
+      <h2 id="where-title">Where it is</h2>
+      <p class="lede" id="where-text"></p>
+      <ul class="where-list" id="where-list"></ul>
+      <p class="plan-note" id="where-note"></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="layout-section" style="padding-top:0" hidden>
+  <div class="wrap">
+    <div class="section-head"><h2>Site plan</h2></div>
+    <a class="layout-plan" id="layout-link" href="#" target="_blank" rel="noopener"><img id="layout-img" alt="" loading="lazy"></a>
+    <p class="plan-note" id="layout-note"></p>
+  </div>
+</section>
+
+
+<section id="plan-section">
+  <div class="wrap plan-grid" id="plan-grid">
+    <div class="plan">
+      <div class="plan-bar"><h3>Site plan</h3><div class="legend" id="c-legend"></div></div>
+      <div id="c-plan"></div>
+      <p class="plan-note">Illustrative, not to scale. The recorded plat governs.</p>
+    </div>
+    <aside class="detail" id="lot-detail" aria-live="polite"></aside>
+  </div>
+</section>
+
+<section class="section" id="gallery-section" hidden>
+  <div class="wrap"><div class="gallery" id="gallery"></div></div>
+</section>
+
+<section class="section" id="lots-section">
+  <div class="wrap">
+    <div class="section-head"><h2>Lots</h2></div>
+    <div class="table-wrap">
+      <table class="lots">
+        <thead><tr>
+          <th><button data-sort="lot">Lot</button></th>
+          <th class="col-comm"></th>
+          <th class="num"><button data-sort="acres">Size</button></th>
+          <th class="num col-front"><button data-sort="frontage">Frontage</button></th>
+          <th class="num"><button data-sort="price">Price</button></th>
+          <th><button data-sort="status">Status</button></th>
+        </tr></thead>
+        <tbody id="lot-rows"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+</main>
+<footer class="site-footer"></footer>
+<script src="data/inventory.js?v=20261124k"></script>
+<script src="js/site.js?v=20261124k"></script>
+<script src="js/pages.js?v=20261124k"></script>
+</body>
+</html>

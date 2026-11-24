@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Current Projects · RTB Development</title>
+<meta name="description" content="Available homesites across RTB Development communities, with pricing, lot sizes and status.">
+<meta name="theme-color" content="#6e2230">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css?v=20261124k">
+</head>
+<body data-page="inventory">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"></header>
+<main id="main">
+
+<section class="page-head" style="background-image:url('images/aerial-pond.jpg')">
+  <div class="wrap row">
+    <h1>Current projects</h1>
+    <p class="aside" id="summary"></p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="tiles" id="communities"></div>
+  </div>
+</section>
+
+<section class="section" id="lots-section">
+  <div class="wrap">
+    <div class="section-head"><h2>Lots</h2></div>
+    <div class="toolbar">
+      <div class="seg" id="status-seg" role="group" aria-label="Filter by status">
+        <button data-status="available" aria-pressed="true">Available</button>
+        <button data-status="contract" aria-pressed="false">Under contract</button>
+        <button data-status="sold" aria-pressed="false">Sold</button>
+        <button data-status="all" aria-pressed="false">All</button>
+      </div>
+      <select class="select" id="filter-community" aria-label="Filter by community"></select>
+      <span class="count" id="lot-count" aria-live="polite"></span>
+    </div>
+    <div class="table-wrap">
+      <table class="lots">
+        <thead><tr>
+          <th><button data-sort="lot">Lot</button></th>
+          <th class="col-comm"><button data-sort="community">Community</button></th>
+          <th class="num"><button data-sort="acres">Size</button></th>
+          <th class="num col-front"><button data-sort="frontage">Frontage</button></th>
+          <th class="num"><button data-sort="price">Price</button></th>
+          <th><button data-sort="status">Status</button></th>
+        </tr></thead>
+        <tbody id="lot-rows"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer"></footer>
+<script src="data/inventory.js?v=20261124k"></script>
+<script src="js/site.js?v=20261124k"></script>
+<script src="js/pages.js?v=20261124k"></script>
+</body>
+</html>

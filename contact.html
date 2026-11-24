@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact · RTB Development</title>
+<meta name="description" content="Ask RTB Development about lot availability, pricing and plats.">
+<meta name="theme-color" content="#6e2230">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css?v=20261124k">
+</head>
+<body data-page="contact">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"></header>
+<main id="main">
+
+<section class="page-head" style="background-image:url('images/aerial-lake.jpg')">
+  <div class="wrap row"><h1>Contact</h1></div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <h2>Let's talk about your next build.</h2>
+      <dl>
+        <div><dt class="label">Email</dt><dd id="c-emails"></dd></div>
+        <div><dt class="label">Offices</dt><dd id="c-offices"></dd></div>
+        <div id="c-phone-row" hidden><dt class="label">Phone</dt><dd id="c-phone"></dd></div>
+      </dl>
+    </div>
+    <form class="form" id="contact-form">
+      <div class="form-row">
+        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" required autocomplete="name"></div>
+        <div class="field"><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization"></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="f-role">I am a</label>
+          <select id="f-role" name="role"><option>Builder</option><option>Individual buyer</option><option>Broker / agent</option><option>Other</option></select>
+        </div>
+        <div class="field"><label for="f-community">Community</label><select id="f-community" name="community"></select></div>
+      </div>
+      <div class="field"><label for="f-lot">Lot(s)</label><input id="f-lot" name="lot"></div>
+      <div class="field"><label for="f-message">Message</label><textarea id="f-message" name="message" required></textarea></div>
+      <button class="btn" type="submit">Send</button>
+      <div class="form-status" id="form-status" role="status"></div>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="site-footer"></footer>
+<script src="data/inventory.js?v=20261124k"></script>
+<script src="js/site.js?v=20261124k"></script>
+<script src="js/pages.js?v=20261124k"></script>
+</body>
+</html>

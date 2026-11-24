@@ -392,10 +392,13 @@
     if (window.L) return Promise.resolve();
     const css = document.createElement("link");
     css.rel = "stylesheet"; css.href = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css";
+    css.integrity = "sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw=="; css.crossOrigin = "anonymous"; css.referrerPolicy = "no-referrer";
     document.head.appendChild(css);
     return new Promise((ok, fail) => {
       const s = document.createElement("script");
       s.src = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js";
+      // Subresource integrity: the browser refuses the file if the CDN copy is ever altered.
+      s.integrity = "sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g=="; s.crossOrigin = "anonymous"; s.referrerPolicy = "no-referrer";
       s.onload = ok; s.onerror = fail; document.head.appendChild(s);
     });
   }
